@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 GOOS=linux GOARCH=amd64 go build -o serv-1 -v main.go
 docker build . -t simple_serve_1
 docker run --name serv1 -d simple_serve_1:latest
@@ -14,3 +15,6 @@ docker run --name simple_proxy \
 --link serv2 \
 -v $HOME/Develop/docker/nginx/micro-nginx/nginx/conf.d:/etc/nginx/conf.d \
 nginx:1.15.5-alpine
+=======
+# nginx-reverse-proxy-sample
+>>>>>>> 17fe003885d80dd33c01317675fe6f1d20baeb33
