@@ -1,10 +1,10 @@
-GOOS=linux GOARCH=amd64 go build -o serv-1 -v main.gg\
+GOOS=linux GOARCH=amd64 go build -o serv-1 -v main.go\
 docker build . -t simple_serve_1\
 docker run --name serv1 -d simple_serve_1:latest\
 
-GOOS=linux GOARCH=amd64 go build -o serv-2 -v main.go
-docker build . -t simple_serve_2
-docker run --name serv2 -d simple_serve_2:latest
+GOOS=linux GOARCH=amd64 go build -o serv-2 -v main.go\
+docker build . -t simple_serve_2\
+docker run --name serv2 -d simple_serve_2:latest\
 
 docker run --name simple_proxy \
 -p 80:80 \
